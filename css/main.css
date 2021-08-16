@@ -1,0 +1,85 @@
+/* Components */
+p{
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+h1,h2{
+    font-family: 'Acme', sans-serif;
+}
+.section-bg{
+    background-image: linear-gradient(to left ,rgb(240, 224, 224) ,rgb(0, 0, 0) 50%);
+}
+.heading h1{
+    position: relative;
+}
+.heading h1::after{
+content: "";
+width: 50%;
+height: 3px;
+background-image: linear-gradient(to right,rgb(192, 97, 97) ,rgb(161, 35, 35));
+border-radius: 50%;
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+}
+.heading hr{
+    border: 1px dashed;
+    width: 30%;
+}
+.heading hr:last-child{
+    width: 20%;
+}
+/* header */
+header .navbar{
+background-image: linear-gradient(to left ,rgb(240, 224, 224) ,rgb(0, 0, 0) 50%);
+}
+header .navbar .navbar-brand img{
+    width: 60px;
+}
+header .navbar .nav-link{
+    font-family: 'Acme', sans-serif;
+    color: teal;
+    position: relative;
+}
+header .navbar .nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 0;
+    height: 1px;
+    background-color: turquoise;
+    transition: .5s;
+}
+header .navbar .nav-link:hover.nav-link::after{
+    width: 100%;
+}
+/* footer */
+footer{
+    background-color: #26272b;
+}
+footer a{
+    color: #6c757d;
+}
+footer a:hover{
+    text-decoration: none;
+}
+footer .social-icon a{
+    font-size: 18px;
+    padding: 7px 12px;
+    background-color: #38393d;
+}
+footer .social-icon a:hover{
+    color:#fff;
+    background-color: rgb(54, 54, 112);
+}
+footer .link-copyright{
+animation: change 2s ease-in-out infinite;
+}
+@keyframes change{
+    25%{color: rgb(230, 75, 75);}
+    50%{color: rgb(57, 40, 218);}
+    75%{color: rgb(101, 230, 101);}
+    100%{color: rgb(99, 215, 250);}
+}
